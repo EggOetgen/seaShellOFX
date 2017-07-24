@@ -25,32 +25,7 @@ class ofApp : public ofBaseApp{
     
     /*TAKEN FROM https://github.com/genekogan/SeashellGenerator */
     
-    // spiral parameters
-   // int D = 1; //varying this stretches and compresses along an axis orthoganal to the "A" parameter
-   // float turns = 6 * TWO_PI;
-    
- //   float alpha = 1.49;
-  //  float beta = .47;
-   // float A = 0;
-    float k = 0.86; // test variable for rate of growth
-    
-    // ellipse orientation parameters
-   // float mu = .08; // angle given in radians
-  //  float omega = .01; // angle given in radians
-   // float phi = 2.6; //rotation of elipse about normal axis, angle given in radians
-    
-    // ellipsoid parameters
-//    float a = 13.13; //elipse radii
-//    float b = 20; //elipse radii
-    
-    // surface parameters
-//    float L = 5;
-//    float P = 5;
-//    float W1 = 5;
-//    float W2 = .39;
-//    int N = 10;
-		
-    
+       
     shell shell;
     
     ofLight light;

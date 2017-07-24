@@ -6,8 +6,11 @@ void ofApp::setup(){
 //    n = 512;
 //    m = 96;
  
-    n = 256;
-    m = 48;
+    n = 384;
+    m = 80;
+    
+//    n = 256;
+//    m = 48;
 
 //    n = 128;
 //    m = 32;
@@ -17,7 +20,7 @@ void ofApp::setup(){
    
  
     gui.setup();
-    gui.add(turns.setup("turns", 10 * TWO_PI, 0, 10 * TWO_PI));
+    gui.add(turns.setup("turns", 6 * TWO_PI, 0, 10 * TWO_PI));
     gui.add(D.setup("D", 1.f, 1.f, 1.f));
     gui.add(alpha.setup("alpha", 1.49f, 0, PI));
     gui.add(beta.setup("beta", .47f, -PI, PI));
@@ -37,10 +40,10 @@ void ofApp::setup(){
 
     pTurns = turns;
   
-    shell.generate(n,m,D, turns, alpha, beta, A, k, mu, omega, phi, a, b, L, P, W1, W2, N);
+    shell.generate(n,m,D, turns, alpha, beta, A, mu, omega, phi, a, b, L, P, W1, W2, N);
     shell.generateMesh(n,m, turns);
  
-    light.setPosition(-100,-300,300);
+   // light.setPosition(-100,-300,300);
 
     light.enable();
     
@@ -51,27 +54,30 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-   shell.generate(n,m, D, turns, alpha, beta, A, k, mu, omega, phi, a, b, L, P, W1, W2, N);
+   shell.generate(n,m, D, turns, alpha, beta, A, mu, omega, phi, a, b, L, P, W1, W2, N);
     if(turns != pTurns){
         shell.generateMesh(n,m, turns);
 
     }else{    
     shell.updateMesh(n, m ,turns);
     }
-    cout<<shell.vertices.size() << " " << shell.shell.size() * shell.shell[0].size() << " " << shell.vertices[607].x << endl;
+   
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
    
     gui.draw();
+   
     ofEnableDepthTest();
-    cam.begin();
+   
     light.enable();
-    shell.draw(m);
-    cam.end();
+        cam.begin();
+            shell.draw(m);
+        cam.end();
     light.disable();
-     ofDisableDepthTest();
+    
+    ofDisableDepthTest();
 }
 
 //--------------------------------------------------------------

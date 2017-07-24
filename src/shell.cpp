@@ -8,7 +8,7 @@
 
 #include "shell.hpp"
 
-void shell::generate(int n, int m, int D, float turns, float alpha, float beta, float A, float k, float mu, float omega, float phi, float a, float b, float L, float P, float W1, float W2, int N)
+void shell::generate(int n, int m, int D, float turns, float alpha, float beta, float A, float mu, float omega, float phi, float a, float b, float L, float P, float W1, float W2, int N)
 {
    
     // adjust resolution of mesh for number of shell turns
@@ -68,31 +68,26 @@ void shell::generate(int n, int m, int D, float turns, float alpha, float beta, 
 
 void shell::generateMesh(int n, int m, float turns)
 {
-   
-    // adjust resolution of mesh for number of shell turns
- //   n = (int) (n * turns / 20.0);
-    n = (int) (n * turns / 20.0);
-
     
-    // vertices
-   // float[][] vertices = new float[ n * m ][3];
-       //vertices.resize(n*m);
-  
+    // adjust resolution of mesh for number of shell turns
+    
+    n = (int) (n * turns / 20.0);
+    
     
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             int pos = i + n * j;
             vertices.push_back(shell[i][j]);
             
-                   }
+        }
     }
     
     shellMesh.clear();
     for (int i = 0; i < vertices.size(); i++) {
         shellMesh.addVertex(vertices[i]);
-        shellMesh.addColor(ofFloatColor(ofMap(i, 0.f, vertices.size(),0.f,1.f)));
+          shellMesh.addColor(ofFloatColor(0.3,ofMap(i, 0.f, vertices.size(),0.f,1.f),1-ofMap(i, 0.f, vertices.size(),0.f,1.f)));
     }
-
+    
     //the following thanks to jake sparrow hunter
     for (int i = m ; i < vertices.size(); i++) {
         if (i < vertices.size() && i != m){
@@ -106,66 +101,19 @@ void shell::generateMesh(int n, int m, float turns)
             
             //TRI2
             //the previous point
-           shellMesh.addIndex(i-1);
+            shellMesh.addIndex(i-1);
             //to the previous point on the previous ring
             shellMesh.addIndex(i-m-1);
             //to one after that
             shellMesh.addIndex(i-m);
         }
-       // SPECIAL CASES
-        
-//       // first case
-//        else if (i == m){
-//            //TRI1
-//            //this point
-//            shellMesh.addIndex(i);
-//            //to previous point
-//            shellMesh.addIndex(i-1);
-//            //to this point on the previous ring
-//            shellMesh.addIndex(i-m);
-//        }
-////        //last case
-//        else if (i == vertices.size()){
-//            //TRI2
-//            //the previous point
-//            shellMesh.addIndex(i-1);
-//            //to the previous point on the previous ring
-//            shellMesh.addIndex(i-m-1);
-//            //to one after that
-//            shellMesh.addIndex(i-m);
-//        }
     }
- 
-//    int index = 0;
-//    for (int i = 0; i < n; i++) {
-//        for (int j = 0; j < m; j++) {
-//            vertices[index][0] = shell[i][j].x;
-//            vertices[index][1] = shell[i][j].y;
-//            vertices[index][2] = shell[i][j].z;
-//            index++;
-//        }
-//    }
-//    
-//    // faces
-//    index = 0;
-//    int[][] faces = new int[ (n-1)*m ][4];
-//    for (int j = 0; j < n-1; j++) {
-//        for (int i = 0; i < m; i++) {
-//            faces[index][0] = i + m * j;
-//            faces[index][1] = (i + 1) % m + m * j;
-//            faces[index][2] = (i + 1) % m + m * (j + 1);
-//            faces[index][3] = i + m * (j + 1);
-//            index++;
-//        }
-//    }
-    
-  
 }
 
 void shell::draw(int m){
     
 
- //  shellMesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+ 
   //  shellMesh.drawWireframe();
 //    ofPushMatrix();
 //      ofTranslate(-50,0,0);
@@ -182,99 +130,11 @@ void shell::draw(int m){
 //    }
 //    ofPopMatrix();
     
-    //    for(int i = 0; i < shell.size(); i++){
-//        for(int j = 0; j < shell[i].size(); j++){
-//            ofDrawCircle(shell[i][j].x, shell[i][j].x, shell[i][j].x);
-//            cout<<shell[i][j].x<<endl;
-//        }
-//    }
-    
-//    glBegin(GL_TRIANGLES);
-//    glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-//    //the following thanks to jake sparrow hunter
-//    for (int i = m ; i <= vertices.size(); i++) {
-//        if (i < vertices.size() && i != m){
-//            //TRI1
-//            //this point
-//            glVertex3f(vertices[i].x, vertices[i].y, vertices[i].z);
-//            //to previous point
-//            glVertex3f(vertices[i-1].x, vertices[i-1].y, vertices[i-1].z);
-//            //to this point on the previous ring
-//            glVertex3f(vertices[i-m].x, vertices[i-m].y, vertices[i-m].z);
-//            
-//            //TRI2
-//            //the previous point
-//            glVertex3f(vertices[i-1].x, vertices[i-1].y, vertices[i-1].z);
-//            //to the previous point on the previous ring
-//            glVertex3f(vertices[i-m-1].x, vertices[i-m-1].y, vertices[i-m-1].z);
-//            //to one after that
-//            glVertex3f(vertices[i-m].x, vertices[i-m].y, vertices[i-m].z);
-//        }
-//        //SPECIAL CASES
-//        
-//        //first case
-//        else if (i == m){
-//            //TRI1
-//            //this point
-//            glVertex3f(vertices[i].x, vertices[i].y, vertices[i].z);
-//            //to previous point
-//            glVertex3f(vertices[i-1].x, vertices[i-1].y, vertices[i-1].z);
-//            //to this point on the previous ring
-//            glVertex3f(vertices[i-m].x, vertices[i-m].y, vertices[i-m].z);
-//        }
-//        //last case
-//        else if (i == vertices.size()){
-//            //TRI2
-//            //the previous point
-//            glVertex3f(vertices[i-1].x, vertices[i-1].y, vertices[i-1].z);
-//            //to the previous point on the previous ring
-//            glVertex3f(vertices[i-m-1].x, vertices[i-m-1].y, vertices[i-m-1].z);
-//            //to one after that
-//            glVertex3f(vertices[i-m].x, vertices[i-m].y, vertices[i-m].z);
-//        }
-//    }
-//    
-//    glEnd();
-  
-
-    
-//     for (int i = 0 ; i <= vertices.size(); i++) {
-//         ofDrawSphere(vertices[i], 2);
-//     }
-}
+  }
 
 void shell::updateMesh(int n, int m, float turns){
-//float time = ofGetElapsedTimef();
-//    
-//    for(int i = 0; i < shellMesh.getVertices().size(); i ++){
-//    ofPoint p = shellMesh.getVertex(i);
-//        float offset = ofNoise(i * 0.5, i*0.5, time)*ofRandom(-1,1);
-//        float scale  = 1;
-//        p.z += offset * scale;
-//        
-//
-//        shellMesh.setVertex(i, p);
-//    }
     
-//    n = (int) (n * turns / 10.0);
-//
-//    for (int i = 0; i < n; i++) {
-//        for (int j = 0; j < m; j++) {
-//            int pos = i + n * j;
-//            shellMesh.setVertex(pos, shell[i][j]);
-//            vertices[pos] = shell[i][j];
-//            
-//        }
-//    }
-//    for (int i = 0; i < shell.size(); i++){
-//        for(int j = 0; j < shell[i].size(); j++){
-//        int pos = i + shell[i].size() * j;
-//            shellMesh.setVertex(pos, shell[i][j]);
-//            vertices[pos] = shell[i][j];
-//        }
-//    }
- 
-     n = (int) (n * turns / 20.0);
+    n = (int) (n * turns / 20.0);
     vertices.clear();
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
@@ -283,10 +143,56 @@ void shell::updateMesh(int n, int m, float turns){
             
         }
     }
-
+    
     for (int i = 0; i < vertices.size(); i++) {
         shellMesh.setVertex(i, vertices[i]);
     }
+    setNormals(shellMesh);
 }
 
+
+//MODIFIED FROM 'MASTERING OPENFRAMEWORKS' BY Denis Perevalov
+void shell::setNormals( ofMesh &mesh )
+{
+    //The number of the vertices
+    int nV = mesh.getNumVertices();
+    //The number of the triangles
+    int nT = mesh.getNumIndices() / 3;
+    vector<glm::tvec3< float, glm::precision::packed_highp>> norm( nV ); //Array for the normals
+    
+    //Scan all the triangles. For each triangle add its
+    //normal to norm's vectors of triangle's vertices
+    for (int t=0; t<nT; t++) {
+        //Get indices of the triangle t
+        int i1 = mesh.getIndex( 3 * t );
+        int i2 = mesh.getIndex( 3 * t + 1 );
+        int i3 = mesh.getIndex( 3 * t + 2 );
+        //Get vertices of the triangle
+        const ofPoint &v1 = mesh.getVertex( i1 );
+        const ofPoint &v2 = mesh.getVertex( i2 );
+        const ofPoint &v3 = mesh.getVertex( i3 );
+        //Compute the triangle's normal
+        ofPoint dir = ( (v2 - v1).cross( v3 - v1 ) ).normalize();
+        //Accumulate it to norm array for i1, i2, i3
+        norm[ i1 ] += dir;
+        norm[ i2 ] += dir;
+        norm[ i3 ] += dir;
+    }
+    //Normalize the normal's length
+    for (int i=0; i<nV; i++) {
+        ofPoint p;
+        p.x = norm[i].x;
+        p.y = norm[i].y;
+        p.z = norm[i].z;
+        p.normalize();
+        
+        norm[i].x = p.x;
+        norm[i].y = p.y;
+        norm[i].z = p.z;
+    }
+
+    //Set the normals to mesh
+    mesh.clearNormals();
+    mesh.addNormals( norm );
+}
 
