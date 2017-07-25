@@ -40,11 +40,15 @@ void ofApp::setup(){
 
     pTurns = turns;
   
+    
     shell.generate(n,m,D, turns, alpha, beta, A, mu, omega, phi, a, b, L, P, W1, W2, N);
     shell.generateMesh(n,m, turns);
  
-   // light.setPosition(-100,-300,300);
+    light.setPosition(-100,-300,300);
 
+    glLightModelf(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
+    glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, 0.5f);
+    
     light.enable();
     
  

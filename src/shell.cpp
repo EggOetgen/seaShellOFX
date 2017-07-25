@@ -122,11 +122,13 @@ void shell::draw(int m){
 //    ofPushMatrix();
 //    ofTranslate(50,0,0);
 
-//    for (int i = 0; i < shell.size(); i++){
-//        for(int j = 0; j < shell[i].size(); j++){
+//    float r = 5;
+//    for (int i = 0; i < shell.size(); i+=4){
+//        for(int j = 0; j < shell[i].size(); j+=4){
 //            
-//            ofDrawSphere(shell[i][j], 0.5);
-//    }
+//            ofDrawSphere(shell[i][j], r);
+//            r *= 1.0000001;
+//        }
 //    }
 //    ofPopMatrix();
     
