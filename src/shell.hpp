@@ -18,6 +18,7 @@ public:
     void draw(int m);
     void updateMesh(int n, int m, float turns);
     void setNormals( ofMesh &mesh );
+    void move(int x, int y, ofVec2f lastMouse);
     
     
     /*TAKEN FROM https://github.com/genekogan/SeashellGenerator */
@@ -53,5 +54,12 @@ public:
     vector<ofPoint> vertices;
 
     
+    ofQuaternion curRot;
+    ofVec3f centroid;
+  
     ofVboMesh shellMesh;
+    ofNode test;
+    
+   // of3dPrimitive shellNode;
+   
 };

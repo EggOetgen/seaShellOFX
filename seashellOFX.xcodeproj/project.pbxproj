@@ -9,6 +9,501 @@
 		<string>46</string>
 		<key>objects</key>
 		<dict>
+			<key>E6F7AE33D73B16007F713ED4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>stb_truetype.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/stb_truetype.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B084B8C85AA0DE22E6210796</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>stb_textedit.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/stb_textedit.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>4D417C50A1C963A150B69C0E</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>stb_rect_pack.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/stb_rect_pack.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>60E40FC34E5714FD0FE4EE62</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imgui_internal.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/imgui_internal.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>629150F93404AC3B00B959DE</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F768C7EE10772D1A6AE02E2C</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F768C7EE10772D1A6AE02E2C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imgui_draw.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/imgui_draw.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>E9BEF156FDF41BA086E9DC15</key>
+			<dict>
+				<key>fileRef</key>
+				<string>DBC9A0CC2A1BC1B2319EF9C7</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>DBC9A0CC2A1BC1B2319EF9C7</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imgui_demo.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/imgui_demo.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>7169B9AE924C05250ADDCC6B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imgui.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/imgui.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>807146441E0D13714E9F4654</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>BA6CF6729E3BFA6E5354BB3D</string>
+					<string>7169B9AE924C05250ADDCC6B</string>
+					<string>DBC9A0CC2A1BC1B2319EF9C7</string>
+					<string>F768C7EE10772D1A6AE02E2C</string>
+					<string>60E40FC34E5714FD0FE4EE62</string>
+					<string>4D417C50A1C963A150B69C0E</string>
+					<string>B084B8C85AA0DE22E6210796</string>
+					<string>E6F7AE33D73B16007F713ED4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>8D2869234BA7562D78D731FF</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>807146441E0D13714E9F4654</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>imgui</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>C618591A26FF62625326E2DD</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>8D2869234BA7562D78D731FF</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>libs</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>2C415C82BFDA7A09DBC08479</key>
+			<dict>
+				<key>fileRef</key>
+				<string>BA6CF6729E3BFA6E5354BB3D</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>BA6CF6729E3BFA6E5354BB3D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imgui.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/libs/imgui/src/imgui.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>463EEB2D7F2C446CAB0C00DF</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ThemeTest.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/ThemeTest.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EAE156B7FE1598DED4505E42</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxImGui.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/ofxImGui.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>23DC12EA10AD46B85969F89C</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>imconfig.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/imconfig.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3A534BC91F0C17771D4E09DD</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Helpers.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/Helpers.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>A595DD99139FED2FCE456EF7</key>
+			<dict>
+				<key>fileRef</key>
+				<string>AB143170E16F640935F29D02</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>AB143170E16F640935F29D02</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Helpers.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/Helpers.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>88E1D63278DE1C67CB0EAE78</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Gui.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/Gui.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>921A2ED20AB03EF32A38BA17</key>
+			<dict>
+				<key>fileRef</key>
+				<string>F112387249CD24D2652112F6</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>F112387249CD24D2652112F6</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>Gui.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/Gui.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B82AF85CFC9F2B9E16BA66D1</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EngineOpenGLES.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/EngineOpenGLES.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>3A218F305615FD3444748F89</key>
+			<dict>
+				<key>fileRef</key>
+				<string>FB7B691BE8C2E78C1F43D5BC</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>FB7B691BE8C2E78C1F43D5BC</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EngineOpenGLES.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/EngineOpenGLES.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CB575E3DE2ABFF6487996464</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EngineGLFW.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/EngineGLFW.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>5EE106109ED4296F2BC9F486</key>
+			<dict>
+				<key>fileRef</key>
+				<string>C748F268167DCEC94C37E157</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>C748F268167DCEC94C37E157</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>EngineGLFW.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/EngineGLFW.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EC6EB2815CC795E6D5DFF471</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>BaseTheme.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/BaseTheme.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>16DA7893AA87978367B3FE42</key>
+			<dict>
+				<key>fileRef</key>
+				<string>899FAD78131E4901BCBA301B</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>899FAD78131E4901BCBA301B</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>BaseTheme.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/BaseTheme.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>B86CA45D4704F1AA09467703</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>BaseEngine.h</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/BaseEngine.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>6FF8AA08E79CFA38503CDB0E</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>0036AD77D503F4330B068775</string>
+					<string>B86CA45D4704F1AA09467703</string>
+					<string>899FAD78131E4901BCBA301B</string>
+					<string>EC6EB2815CC795E6D5DFF471</string>
+					<string>C748F268167DCEC94C37E157</string>
+					<string>CB575E3DE2ABFF6487996464</string>
+					<string>FB7B691BE8C2E78C1F43D5BC</string>
+					<string>B82AF85CFC9F2B9E16BA66D1</string>
+					<string>F112387249CD24D2652112F6</string>
+					<string>88E1D63278DE1C67CB0EAE78</string>
+					<string>AB143170E16F640935F29D02</string>
+					<string>3A534BC91F0C17771D4E09DD</string>
+					<string>23DC12EA10AD46B85969F89C</string>
+					<string>EAE156B7FE1598DED4505E42</string>
+					<string>463EEB2D7F2C446CAB0C00DF</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>768C3255AF2F3E1A78DC4DF4</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>6FF8AA08E79CFA38503CDB0E</string>
+					<string>C618591A26FF62625326E2DD</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxImGui</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>94C3A35816CF6A0DE0CD3082</key>
+			<dict>
+				<key>fileRef</key>
+				<string>0036AD77D503F4330B068775</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>0036AD77D503F4330B068775</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>BaseEngine.cpp</string>
+				<key>path</key>
+				<string>../../addons/ofxImGui/src/BaseEngine.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>4581B326630EC957ED91E25E</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -609,6 +1104,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
@@ -670,6 +1169,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
@@ -710,6 +1213,7 @@ fi
 				<key>children</key>
 				<array>
 					<string>480A780D8D0308AE4A368801</string>
+					<string>768C3255AF2F3E1A78DC4DF4</string>
 				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>
@@ -866,6 +1370,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
@@ -925,6 +1433,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
@@ -992,6 +1504,15 @@ fi
 					<string>9F74DFA8C0F57500C92936C8</string>
 					<string>A3C6983F8768ECD6DBA89E0F</string>
 					<string>413A3F52C6AC90B4F28A6A1C</string>
+					<string>94C3A35816CF6A0DE0CD3082</string>
+					<string>16DA7893AA87978367B3FE42</string>
+					<string>5EE106109ED4296F2BC9F486</string>
+					<string>3A218F305615FD3444748F89</string>
+					<string>921A2ED20AB03EF32A38BA17</string>
+					<string>A595DD99139FED2FCE456EF7</string>
+					<string>2C415C82BFDA7A09DBC08479</string>
+					<string>E9BEF156FDF41BA086E9DC15</string>
+					<string>629150F93404AC3B00B959DE</string>
 				</array>
 				<key>isa</key>
 				<string>PBXSourcesBuildPhase</string>
@@ -1079,6 +1600,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
@@ -1123,6 +1648,10 @@ fi
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
 						<string>../../addons/ofxGui/src</string>
+						<string>../../addons/ofxImGui/libs</string>
+						<string>../../addons/ofxImGui/libs/imgui</string>
+						<string>../../addons/ofxImGui/libs/imgui/src</string>
+						<string>../../addons/ofxImGui/src</string>
 					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>

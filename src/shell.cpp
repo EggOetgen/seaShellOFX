@@ -85,7 +85,8 @@ void shell::generateMesh(int n, int m, float turns)
     shellMesh.clear();
     for (int i = 0; i < vertices.size(); i++) {
         shellMesh.addVertex(vertices[i]);
-          shellMesh.addColor(ofFloatColor(0.3,ofMap(i, 0.f, vertices.size(),0.f,1.f),1-ofMap(i, 0.f, vertices.size(),0.f,1.f)));
+          shellMesh.addColor(ofFloatColor(ofMap(i, 0.f, vertices.size(),0.7f,0.9f),0.788,0.761));
+      //  shellMesh.addColor(ofFloatColor(0.894,0.788,0.761));
     }
     
     //the following thanks to jake sparrow hunter
@@ -108,6 +109,33 @@ void shell::generateMesh(int n, int m, float turns)
             shellMesh.addIndex(i-m);
         }
     }
+//    shellNode.getMesh().clear();
+//    for (int i = 0; i < vertices.size(); i++) {
+//        shellNode.getMesh().addVertex(vertices[i]);
+//        shellNode.getMesh().addColor(ofFloatColor(ofMap(i, 0.f, vertices.size(),0.7f,0.9f),0.788,0.761));
+//        //  shellMesh.addColor(ofFloatColor(0.894,0.788,0.761));
+//    }
+//    
+//    //the following thanks to jake sparrow hunter
+//    for (int i = m ; i < vertices.size(); i++) {
+//        if (i < vertices.size() && i != m){
+//            //TRI1
+//            //this point
+//            shellNode.getMesh().addIndex(i);
+//            //to previous point
+//            shellNode.getMesh().addIndex(i-1);
+//            //to this point on the previous ring
+//            shellNode.getMesh().addIndex(i-m);
+//            
+//            //TRI2
+//            //the previous point
+//            shellNode.getMesh().addIndex(i-1);
+//            //to the previous point on the previous ring
+//            shellNode.getMesh().addIndex(i-m-1);
+//            //to one after that
+//            shellNode.getMesh().addIndex(i-m);
+//        }
+//    }
 }
 
 void shell::draw(int m){
@@ -115,11 +143,26 @@ void shell::draw(int m){
 
  
   //  shellMesh.drawWireframe();
-//    ofPushMatrix();
-//      ofTranslate(-50,0,0);
+    
+    
+    ofVec3f axis;
+    float angle;
+    curRot.getRotate(angle, axis);
+    centroid = shellMesh.getCentroid();
+    centroid.rotate(angle, axis);
+    test.setPosition(centroid);
+    ofDrawBox(test.getPosition(), 20);
+    test.draw();
+    
+    ofPushMatrix();
+   
+
+   
+    ofRotate(angle, axis.x, axis.y, axis.z);
     shellMesh.draw();
-//    ofPopMatrix();
-//    ofPushMatrix();
+           ofPopMatrix();
+
+    //    ofPushMatrix();
 //    ofTranslate(50,0,0);
 
 //    float r = 5;
@@ -150,7 +193,7 @@ void shell::updateMesh(int n, int m, float turns){
         shellMesh.setVertex(i, vertices[i]);
     }
     setNormals(shellMesh);
-}
+    }
 
 
 //MODIFIED FROM 'MASTERING OPENFRAMEWORKS' BY Denis Perevalov
@@ -198,3 +241,14 @@ void shell::setNormals( ofMesh &mesh )
     mesh.addNormals( norm );
 }
 
+
+//taken from https://forum.openframeworks.cc/t/up-down-left-right-rotation-problem-please-help/8328/2
+void shell::move(int x, int y, ofVec2f lastMouse){
+  
+    ofVec2f mouse(x/10,y/10);
+    ofQuaternion yRot(x-lastMouse.x, ofVec3f(0,1,0));
+    ofQuaternion xRot(y-lastMouse.y, ofVec3f(-1,0,0));
+    curRot *= yRot*xRot;
+  //  lastMouse = mouse;
+
+}
